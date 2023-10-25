@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>회원가입</title>
+    <style>    
+     body {
+       background-color:#f5f5f5 ;
+       margin :0 ;
+       padding :0 ;
+       font-family :Arial ,sans-serif ;   
+     }  
+  
+     .container{
+	   max-width :400px ;
+	   margin :50px auto ;
+	   padding :20px ;
+	   background-color :#ffffff ;  
+	   border-radius :10px ;
+	 }
+
+     h2{
+        text-align:center;
+        color:#333333;
+        margin-bottom:20px;
+      }
+
+      form{
+        display:flex;
+        flex-direction:column;
+      }
+
+      input[type="text"], input[type="password"] {
+          width: 100%;
+          padding: 10px 15px;
+          margin-bottom: 10px;
+          border-radius: 4px;
+          border: none;  
+      }
+      
+      button[type="submit"]{
+          width:auto;
+          padding:12px 24px;
+          background-color:#4caf50;  
+          color:#ffffff;   
+          border:none;   
+		  border-radius:.25rem ;    
+	  }
+    </style>
+
+    <script type="text/javascript">
+	    function submitForm() { // 폼 데이터 전송 처리 함수
+		    // 폼 데이터 가져오기
+		    var username = document.getElementById("username").value.trim();
+		    var password = document.getElementById("password").value.trim();
+
+		    // 유효성 검사 등 필요한 로직 구현
+
+		    // 서버에 회원가입 요청 등 필요한 처리
+
+		    alert("회원가입이 완료되었습니다."); // 가상의 알림 메시지 출력
+
+            window.opener.postMessage("signupSuccess", "*"); // 부모 창으로 메시지 전달
+
+            window.close(); // 팝업 창 닫기
+	    }
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>회원가입</h2>
+
+        <form action="/signup" method="post" onsubmit="event.preventDefault(); submitForm();">
+            <input type="text" id="username" name="username" placeholder="사용자명">
+            <input type= "password" id="password" name= "password" placeholder= "비밀번호">
+
+            <button type = "submit">회원 가입</button >
+        </form >
+    </div>
+
+

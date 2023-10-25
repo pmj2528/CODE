@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TJ QUIZ</title>
+    <style>
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        h1 {
+          text-align:center;  
+          color:#333333; 
+        }
+        
+        p {
+          line-height: 1.5;
+          color:#666666; 
+        }
+
+		.logo {
+			text-align:center; 
+			margin-bottom:20px; 
+		}
+
+		.login-signup-container {
+			display:flex; 
+			flex-direction: column; /* 세로 정렬 */
+			align-items:flex-end; /* 오른쪽 정렬 */
+			margin-bottom:20px; 
+		}
+
+		.login-signup-container button{
+			padding:.5rem 1rem; 
+			font-size:.8rem; 
+			margin-top:.5rem;
+	    }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="logo">
+         <img src="TJ-LOGO.png" alt="로고" width="200">
+      </div>
+
+      <h1>TJ CODE QUIZ</h1>
+
+      <p>이곳에 내용을 추가하세요.</p>
+
+	  <!-- 로그인 및 회원가입 버튼 -->
+	  <div class="login-signup-container">
+		  <!-- 로그인 -->
+		  <button type="button" onclick="openLoginPopup()">로그인</button>
+
+		  <!-- 스크립트를 통해 팝업 창 열기 -->
+		  <script type="text/javascript">
+			  function openLoginPopup() {
+				  window.open("login.html", "로그인", "width=400,height=300");
+			  }
+		  </script>
+
+		  <!-- 회원가입 -->
+		  <button type="button" onclick="openSignupPopup()">회원가입</button>
+
+		  <!-- 스크립트를 통해 팝업 창 열기 -->
+		  <script type="text/javascript">
+			  function openSignupPopup() {
+				  window.open("signup.html", "회원가입", "width=400,height=300");
+			  }
+		  </script>
+
+	  </div>
+
+   </div>
+
+</body>
+
+
+
